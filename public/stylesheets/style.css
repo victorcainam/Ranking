@@ -1,0 +1,7 @@
+*{ padding: 0; margin: 0; list-style: none; }
+
+body {
+  background: #272727;
+  padding: 200px;
+  font: 12px "Montserrat", Arial, Sans-serif;
+}

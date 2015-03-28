@@ -1,0 +1,184 @@
+/* ClearFix */
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: block;
+}
+
+.clearfix:after{ clear: both; }
+
+/* Variáveis Less */
+@colorWhite: #fff;
+@colorRed: #ba3634;
+
+.arredonda(@raio: 2px) {
+	-webkit-border-radius: @raio;
+	-moz-border-radius: @raio;
+	border-radius: @raio;
+}
+
+.arredondaTop(@raio: 2px 2px 0 0) {
+	-webkit-border-radius: @raio;
+	-moz-border-radius: @raio;
+	border-radius: @raio;
+}
+
+.arredondaBottom(@raio: 0 0 2px 2px) {
+	-webkit-border-radius: @raio;
+	-moz-border-radius: @raio;
+	border-radius: @raio;
+}
+
+/* Ranking Conteúdo */
+.ranking-content{
+	width: 340px;
+	position: relative;
+}
+
+.ranking-content h1{
+	width: 179px;
+	height: 188px;
+	left: -30px;
+	top: -125px;
+	position: absolute;
+	text-indent: -9999px;
+	background: url(../images/logotipo.png) no-repeat;
+}
+
+.ranking-content h1 + span{
+	color: #272727;
+	width: 80%;
+	height: 52px;
+	float: right;
+	background: @colorWhite;
+	text-align: right;
+	padding-right: 25px;
+	margin-bottom: 15px;
+	font:700 30px/50px "Montserrat", Arial;
+	.arredonda(3px);
+}
+
+
+/* Participantes */
+.ranking-content .participantes{
+	clear: both;
+	background: @colorWhite;
+	.arredonda(3px);	
+}
+
+.ranking-content .participantes li{
+	position: relative;
+
+		&:hover {
+			background: @colorRed;
+
+			img{
+				border-color: @colorWhite;
+			}
+
+			h2{ color: @colorWhite; }
+
+			p{ color: #330d0e; }
+
+			.enquete{ display: block; }
+		}
+}
+
+.ranking-content .participantes li:nth-child(2n+2){
+	background: #f2f1f1;
+
+		&:hover {
+			background: @colorRed;
+		}	
+}
+
+.ranking-content .participantes li:first-child{ .arredondaTop; }
+.ranking-content .participantes li:last-child{ .arredondaBottom; }
+
+.ranking-content .participantes img{
+	width: 58px;
+	height: 58px;
+	float: left;
+	margin: 16px 18px;
+	border: 4px solid @colorRed;
+	.arredonda(50px)	
+}
+
+.ranking-content .participantes > li > span{
+	color: #707070;
+	position: absolute;
+	left: 63px;
+	bottom: 13px;
+	background: @colorWhite;
+	padding: 0px 6px;
+	font: 700 14px "Montserrat", Arial;
+	border: 2px solid #a4a3a3;
+	.arredonda(50px);		
+}
+
+.ranking-content .participantes h2{
+	color: @colorRed;
+	display: inline-block;
+	margin: 32px 0 0 0;
+	font: 400 18px "Montserrat", Arial;
+}
+
+.ranking-content .participantes p{
+	color: #909090;
+	font: 400 12px "Montserrat", Arial;
+}
+
+
+/* Enquete */
+.ranking-content .enquete{
+	position: absolute;
+	right: -185px;
+	top: 18px;
+	display: none;
+}
+
+.ranking-content .enquete ul{
+	width: 155px;
+	margin-left: 6px;
+	overflow: hidden;
+	.arredonda(5px);
+}
+
+.ranking-content .enquete > span{
+	display: inline-block;
+	background: transparent;
+	margin-top: 26px;
+	position: absolute;
+	border-top: 6px solid transparent;	
+	border-bottom: 6px solid transparent; 
+	border-right: 6px solid #f8f7f7; 	
+}
+
+.ranking-content .enquete li{
+	text-align: center;
+	float: left;
+}
+
+.ranking-content .enquete li:first-child{ width: 39%; border-right: 1px solid #8c8b84; }
+.ranking-content .enquete li:last-child{ width: 60%; }
+
+.ranking-content .enquete strong,
+.ranking-content .enquete > ul span{
+	display: block;
+	text-align: center;
+}
+
+.ranking-content .enquete strong{
+	color: #f2f1f1;
+	padding: 3px 0;
+	background: @colorRed;
+	font: 700 10px "Montserrat", Arial;
+}
+
+.ranking-content .enquete > ul span{
+	color: #909090;
+	background: #f8f7f7;
+	font: 700 24px "Montserrat", Arial;
+}
+
+
