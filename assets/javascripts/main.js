@@ -1,8 +1,7 @@
 
 $(function(){
-
 	var itens = "";
-	var URL = "fazenda.json";
+	var URL = "assets/data/fazenda.json";
 	var posicao = [];
 
 	$.ajax({
